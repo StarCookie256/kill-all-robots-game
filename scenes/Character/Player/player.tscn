@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://dyjun80rdi4fu"]
+
+[ext_resource type="Script" uid="uid://qv2w2stdr5ma" path="res://scenes/Character/Player/player.gd" id="1_lp6qe"]
+[ext_resource type="Texture2D" uid="uid://187itsa0c1pp" path="res://assets/Main Characters/Hero/hero_without_hand.png" id="2_3p026"]
+[ext_resource type="Texture2D" uid="uid://bu2onlq51v5cp" path="res://assets/Main Characters/Hero/hero_walk_without_hand1.png" id="3_3p026"]
+[ext_resource type="Texture2D" uid="uid://b0ee4avqj84ng" path="res://assets/Main Characters/Hero/hero_walk_without_hand2.png" id="4_ld6e4"]
+[ext_resource type="Texture2D" uid="uid://citmku5twads5" path="res://assets/Main Characters/Hero/hero_walk_without_hand3.png" id="5_lp6qe"]
+[ext_resource type="Texture2D" uid="uid://cik7w5o30hbiu" path="res://assets/Main Characters/Hero/hero_walk_without_hand4.png" id="6_1kxun"]
+[ext_resource type="Texture2D" uid="uid://devpxx07c84fy" path="res://assets/Main Characters/Hero/hero_hand.png" id="7_ld6e4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iinkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3p026")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3p026")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ld6e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lp6qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1kxun")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fgnd"]
+size = Vector2(52, 107)
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_lp6qe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, -24)
+sprite_frames = SubResource("SpriteFrames_iinkm")
+animation = &"Walk"
+frame_progress = 0.41131124
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 2.5)
+shape = SubResource("RectangleShape2D_8fgnd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="NodeLeft" type="Node2D" parent="."]
+position = Vector2(22, -18)
+
+[node name="HandLeft" type="Sprite2D" parent="NodeLeft"]
+position = Vector2(2, 18)
+texture = ExtResource("7_ld6e4")
+flip_h = true
+
+[node name="NodeRight" type="Node2D" parent="."]
+position = Vector2(-8, -18)
+
+[node name="HandRight" type="Sprite2D" parent="NodeRight"]
+position = Vector2(-1.9999995, 18)
+texture = ExtResource("7_ld6e4")
