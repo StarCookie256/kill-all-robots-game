@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://hrmmo12i341p"]
+
+[ext_resource type="Script" uid="uid://bjudu1aq0ydja" path="res://scripts/Weapons/Bullets/bullet_base.gd" id="1_nnio6"]
+[ext_resource type="Texture2D" uid="uid://doe2dgv36awcu" path="res://assets/Traps/Saw/Off.png" id="2_2tlax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tlax"]
+size = Vector2(9.5, 9.25)
+
+[node name="PistolBullet" type="Area2D"]
+script = ExtResource("1_nnio6")
+metadata/_custom_type_script = "uid://bjudu1aq0ydja"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2tlax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2tlax")

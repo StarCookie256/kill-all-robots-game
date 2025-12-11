@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dyjun80rdi4fu"]
+[gd_scene load_steps=11 format=3 uid="uid://dyjun80rdi4fu"]
 
 [ext_resource type="Script" uid="uid://qv2w2stdr5ma" path="res://scenes/Character/Player/player.gd" id="1_lp6qe"]
 [ext_resource type="Texture2D" uid="uid://187itsa0c1pp" path="res://assets/Main Characters/Hero/hero_without_hand.png" id="2_3p026"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://7dtrc7t7b1hs" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand3.png" id="5_1kxun"]
 [ext_resource type="Texture2D" uid="uid://dwim4cpb6rp82" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand4.png" id="6_fwi8b"]
 [ext_resource type="Texture2D" uid="uid://devpxx07c84fy" path="res://assets/Main Characters/Hero/hero_hand.png" id="7_ld6e4"]
+[ext_resource type="PackedScene" uid="uid://c4rqmpgg7agwu" path="res://scenes/Weapons/pistol.tscn" id="8_lp6qe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iinkm"]
 animations = [{
@@ -39,10 +40,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fgnd"]
 size = Vector2(52, 107)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gun")]
 scale = Vector2(0.5, 0.5)
 collision_mask = 4
 script = ExtResource("1_lp6qe")
+gun = NodePath("GunContainer/Pistol")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, -24)
@@ -70,5 +72,13 @@ flip_h = true
 position = Vector2(-8, -18)
 
 [node name="HandRight" type="Sprite2D" parent="NodeRight"]
-position = Vector2(-1.9999995, 18)
+position = Vector2(-2, 18)
 texture = ExtResource("7_ld6e4")
+
+[node name="GunContainer" type="Node2D" parent="."]
+position = Vector2(10, -12)
+
+[node name="Pistol" parent="GunContainer" instance=ExtResource("8_lp6qe")]
+position = Vector2(2.38419e-07, 24)
+rotation = 1.55509
+scale = Vector2(1, 1)

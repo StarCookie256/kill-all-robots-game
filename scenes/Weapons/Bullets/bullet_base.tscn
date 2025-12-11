@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cws6hhkk807yi"]
+
+[ext_resource type="Script" uid="uid://bjudu1aq0ydja" path="res://scripts/Weapons/Bullets/bullet_base.gd" id="1_ywaht"]
+
+[node name="BulletBase" type="Area2D"]
+monitorable = false
+script = ExtResource("1_ywaht")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -168,5 +168,5 @@ tile_set = SubResource("TileSet_8gcrf")
 [node name="Player" parent="." instance=ExtResource("1_gol0p")]
 position = Vector2(181, 238)
 
-[node name="Player2" parent="." instance=ExtResource("3_px18m")]
-position = Vector2(502, -13)
+[node name="BulletsContainer" type="Node2D" parent="." groups=["bullets_container"]]
+unique_name_in_owner = true
