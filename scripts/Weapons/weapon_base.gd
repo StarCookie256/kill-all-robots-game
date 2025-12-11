@@ -1,6 +1,6 @@
 class_name WeaponBase extends Node2D
 
-@export var shoot_interval: float = 0.1
+@export var shoot_interval: float = 0.01
 @export var bullet: PackedScene
 @export var bullet_spawnpoint: Node2D
 

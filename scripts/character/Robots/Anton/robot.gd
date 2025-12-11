@@ -13,9 +13,9 @@ func _physics_process(delta):
 	# Определяем направление к игроку
 	var direction = 0
 	if player:
-		if player.global_position.x > global_position.x:
+		if player.global_position.x > global_position.x+10:
 			direction = 1  # идем вправо
-		elif player.global_position.x < global_position.x:
+		elif player.global_position.x < global_position.x-10  :
 			direction = -1  # идем влево
 
 	# Движение

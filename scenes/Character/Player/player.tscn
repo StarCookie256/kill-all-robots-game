@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dyjun80rdi4fu"]
+[gd_scene load_steps=13 format=3 uid="uid://dyjun80rdi4fu"]
 
 [ext_resource type="Script" uid="uid://qv2w2stdr5ma" path="res://scenes/Character/Player/player.gd" id="1_lp6qe"]
 [ext_resource type="Texture2D" uid="uid://187itsa0c1pp" path="res://assets/Main Characters/Hero/hero_without_hand.png" id="2_3p026"]
 [ext_resource type="Texture2D" uid="uid://brgsrkapbqvjy" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand1.png" id="3_ld6e4"]
+[ext_resource type="Texture2D" uid="uid://4655tbqsqaw1" path="res://assets/Main Characters/Hero/START/hero_jump_start_without_hand1.png" id="3_qivy8"]
 [ext_resource type="Texture2D" uid="uid://dkqhcq7755ed0" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand2.png" id="4_lp6qe"]
 [ext_resource type="Texture2D" uid="uid://7dtrc7t7b1hs" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand3.png" id="5_1kxun"]
 [ext_resource type="Texture2D" uid="uid://dwim4cpb6rp82" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand4.png" id="6_fwi8b"]
+[ext_resource type="Texture2D" uid="uid://dad28yfdx4dc1" path="res://assets/Main Characters/Hero/hero_jump_without_hand.png" id="7_1gfp8"]
 [ext_resource type="Texture2D" uid="uid://devpxx07c84fy" path="res://assets/Main Characters/Hero/hero_hand.png" id="7_ld6e4"]
 [ext_resource type="PackedScene" uid="uid://c4rqmpgg7agwu" path="res://scenes/Weapons/pistol.tscn" id="8_lp6qe"]
 
@@ -18,6 +20,17 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qivy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1gfp8")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -49,8 +62,8 @@ gun = NodePath("GunContainer/Pistol")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, -24)
 sprite_frames = SubResource("SpriteFrames_iinkm")
-animation = &"Walk"
-frame_progress = 0.81785476
+animation = &"Jump"
+frame_progress = 0.6359953
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -81,4 +94,3 @@ position = Vector2(10, -12)
 [node name="Pistol" parent="GunContainer" instance=ExtResource("8_lp6qe")]
 position = Vector2(2.38419e-07, 24)
 rotation = 1.55509
-scale = Vector2(1, 1)
