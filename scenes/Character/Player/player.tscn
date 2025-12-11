@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://qv2w2stdr5ma" path="res://scenes/Character/Player/player.gd" id="1_lp6qe"]
 [ext_resource type="Texture2D" uid="uid://187itsa0c1pp" path="res://assets/Main Characters/Hero/hero_without_hand.png" id="2_3p026"]
-[ext_resource type="Texture2D" uid="uid://bu2onlq51v5cp" path="res://assets/Main Characters/Hero/hero_walk_without_hand1.png" id="3_3p026"]
-[ext_resource type="Texture2D" uid="uid://b0ee4avqj84ng" path="res://assets/Main Characters/Hero/hero_walk_without_hand2.png" id="4_ld6e4"]
-[ext_resource type="Texture2D" uid="uid://citmku5twads5" path="res://assets/Main Characters/Hero/hero_walk_without_hand3.png" id="5_lp6qe"]
-[ext_resource type="Texture2D" uid="uid://cik7w5o30hbiu" path="res://assets/Main Characters/Hero/hero_walk_without_hand4.png" id="6_1kxun"]
+[ext_resource type="Texture2D" uid="uid://brgsrkapbqvjy" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand1.png" id="3_ld6e4"]
+[ext_resource type="Texture2D" uid="uid://dkqhcq7755ed0" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand2.png" id="4_lp6qe"]
+[ext_resource type="Texture2D" uid="uid://7dtrc7t7b1hs" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand3.png" id="5_1kxun"]
+[ext_resource type="Texture2D" uid="uid://dwim4cpb6rp82" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand4.png" id="6_fwi8b"]
 [ext_resource type="Texture2D" uid="uid://devpxx07c84fy" path="res://assets/Main Characters/Hero/hero_hand.png" id="7_ld6e4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iinkm"]
@@ -20,16 +20,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_3p026")
+"texture": ExtResource("3_ld6e4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ld6e4")
+"texture": ExtResource("4_lp6qe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_lp6qe")
+"texture": ExtResource("5_1kxun")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_1kxun")
+"texture": ExtResource("6_fwi8b")
 }],
 "loop": true,
 "name": &"Walk",
@@ -47,7 +47,7 @@ script = ExtResource("1_lp6qe")
 position = Vector2(8, -24)
 sprite_frames = SubResource("SpriteFrames_iinkm")
 animation = &"Walk"
-frame_progress = 0.41131124
+frame_progress = 0.2501743
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
