@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://b73gu1pv76j3q"]
+[gd_scene load_steps=8 format=4 uid="uid://b73gu1pv76j3q"]
 
 [ext_resource type="PackedScene" uid="uid://dyjun80rdi4fu" path="res://scenes/Character/Player/player.tscn" id="1_gol0p"]
 [ext_resource type="Texture2D" uid="uid://bdpj1y4wjmpca" path="res://assets/Terrain/Terrain (16x16).png" id="2_br8qb"]
 [ext_resource type="PackedScene" uid="uid://cy6mdk5r4g8u5" path="res://scenes/Enemies/Robots/robot.tscn" id="3_px18m"]
 [ext_resource type="PackedScene" uid="uid://b8rrpusgigwru" path="res://scenes/Enemies/Melee Normal Robot/melee_normal_robot.tscn" id="4_8gcrf"]
+[ext_resource type="PackedScene" uid="uid://w08f0phyw8wm" path="res://scenes/Enemies/Melee Wrecked Robot/melee_wrecked_robot.tscn" id="5_rdp1x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_px18m"]
 texture = ExtResource("2_br8qb")
@@ -189,6 +190,12 @@ collision_mask = 4
 
 [node name="MeleeNormalRobot" parent="." instance=ExtResource("4_8gcrf")]
 position = Vector2(612, 353)
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+collision_mask = 4
+
+[node name="MeleeWreckedRobot" parent="." instance=ExtResource("5_rdp1x")]
+position = Vector2(25, 321)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 4

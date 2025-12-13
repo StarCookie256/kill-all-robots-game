@@ -1,0 +1,179 @@
+[gd_scene load_steps=37 format=3 uid="uid://w08f0phyw8wm"]
+
+[ext_resource type="PackedScene" uid="uid://0ptp8qkr0gx6" path="res://scenes/Enemies/enemy_base.tscn" id="1_lxh8y"]
+[ext_resource type="Script" uid="uid://dp00w8gnfa5ee" path="res://scripts/Enemies/Melee Wrecked Robot/melee_wrecked_robot.gd" id="2_obsab"]
+[ext_resource type="Texture2D" uid="uid://n256blw7uifg" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack1.png" id="3_76mp3"]
+[ext_resource type="Texture2D" uid="uid://dyeh16ruteb2o" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack2.png" id="4_5njlc"]
+[ext_resource type="Texture2D" uid="uid://c53rc7si3wur4" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack3.png" id="5_rdrek"]
+[ext_resource type="Texture2D" uid="uid://dcrbd3y78kkdc" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack4.png" id="6_pwcxn"]
+[ext_resource type="Texture2D" uid="uid://bpw64ra1rgaap" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack5.png" id="7_o4gfk"]
+[ext_resource type="Texture2D" uid="uid://3s2tbywhedyh" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack6.png" id="8_3udm0"]
+[ext_resource type="Texture2D" uid="uid://dxsfs5ade20sp" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack7.png" id="9_cblcp"]
+[ext_resource type="Texture2D" uid="uid://bt7h37gwqmexf" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack8.png" id="10_ty1p3"]
+[ext_resource type="Texture2D" uid="uid://dt3557w1qe8lp" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack9.png" id="11_ssm4e"]
+[ext_resource type="Texture2D" uid="uid://cr5f207yr45xe" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack10.png" id="12_rhep3"]
+[ext_resource type="Texture2D" uid="uid://dil7wte1px6f0" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack11.png" id="13_vetcw"]
+[ext_resource type="Texture2D" uid="uid://dgtm8eu6mnoyc" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack12.png" id="14_0qwpn"]
+[ext_resource type="Texture2D" uid="uid://d1jskhgbq376o" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack13.png" id="15_1js4c"]
+[ext_resource type="Texture2D" uid="uid://bn8dt5dl08yml" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack14.png" id="16_30s1u"]
+[ext_resource type="Texture2D" uid="uid://bs2da4f7pnwn4" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack15.png" id="17_8aqge"]
+[ext_resource type="Texture2D" uid="uid://d0omu35btp5gj" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack16.png" id="18_l666w"]
+[ext_resource type="Texture2D" uid="uid://qocme7apnhoi" path="res://assets/Enemies/Melee Wrecked Robot/Attack/melee_wrecked_robot_attack17.png" id="19_7i10c"]
+[ext_resource type="Texture2D" uid="uid://c57gicbgimehk" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death1.png" id="20_kwfik"]
+[ext_resource type="Texture2D" uid="uid://beps5jtnblmy7" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death2.png" id="21_rjilc"]
+[ext_resource type="Texture2D" uid="uid://dhhjnn6ug8ru5" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death3.png" id="22_cawp2"]
+[ext_resource type="Texture2D" uid="uid://dybsa2nwojwqk" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death4.png" id="23_wao1m"]
+[ext_resource type="Texture2D" uid="uid://djfk5aqeur2fa" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death5.png" id="24_dsd48"]
+[ext_resource type="Texture2D" uid="uid://bdar5rikrflgl" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death6.png" id="25_rj4jg"]
+[ext_resource type="Texture2D" uid="uid://c3oup67i7eb4g" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death7.png" id="26_t0ds4"]
+[ext_resource type="Texture2D" uid="uid://bnkosy2ufy3jf" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death8.png" id="27_k6qq2"]
+[ext_resource type="Texture2D" uid="uid://c5vkn0sq1w326" path="res://assets/Enemies/Melee Wrecked Robot/Death/melee_wrecked_robot_death9.png" id="28_lm0s7"]
+[ext_resource type="Texture2D" uid="uid://bx52vpt0l6rag" path="res://assets/Enemies/Melee Wrecked Robot/Stay/melee_wrecked_robot_stay.png" id="29_qmtf5"]
+[ext_resource type="Texture2D" uid="uid://u8kwuqlautcc" path="res://assets/Enemies/Melee Wrecked Robot/Walk/melee_wrecked_robot_walk1.png" id="30_gjvx7"]
+[ext_resource type="Texture2D" uid="uid://cxkfpkp5yrhsk" path="res://assets/Enemies/Melee Wrecked Robot/Walk/melee_wrecked_robot_walk2.png" id="31_0gtxn"]
+[ext_resource type="Texture2D" uid="uid://cgoqfg5ip7scw" path="res://assets/Enemies/Melee Wrecked Robot/Walk/melee_wrecked_robot_walk3.png" id="32_3kbcj"]
+[ext_resource type="Texture2D" uid="uid://boc87emyvdat5" path="res://assets/Enemies/Melee Wrecked Robot/Walk/melee_wrecked_robot_walk4.png" id="33_2ulco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67i2u"]
+size = Vector2(68, 98)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tsmgn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_76mp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5njlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rdrek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pwcxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o4gfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3udm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cblcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ty1p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ssm4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rhep3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vetcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0qwpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1js4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_30s1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8aqge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l666w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7i10c")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_kwfik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rjilc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cawp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wao1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dsd48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_rj4jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_t0ds4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_k6qq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lm0s7")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_qmtf5")
+}],
+"loop": true,
+"name": &"Stay",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_gjvx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0gtxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3kbcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2ulco")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxh8y"]
+size = Vector2(55, 75)
+
+[node name="MeleeWreckedRobot" instance=ExtResource("1_lxh8y")]
+script = ExtResource("2_obsab")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(3, 36)
+shape = SubResource("RectangleShape2D_67i2u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_tsmgn")
+animation = &"Attack"
+frame = 16
+frame_progress = 1.0
+
+[node name="Hit" type="Area2D" parent="AnimatedSprite2D" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hit" index="0"]
+position = Vector2(40.5, 12.5)
+shape = SubResource("RectangleShape2D_lxh8y")
+
+[connection signal="body_shape_entered" from="AnimatedSprite2D/Hit" to="." method="_on_hit_body_shape_entered"]
+[connection signal="body_shape_exited" from="AnimatedSprite2D/Hit" to="." method="_on_hit_body_shape_exited"]
