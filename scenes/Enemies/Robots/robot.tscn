@@ -50,8 +50,7 @@ shape = SubResource("RectangleShape2D_8fgnd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iinkm")
-animation = &"Walk"
-frame_progress = 0.19795659
+animation = &"Idle"
 flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

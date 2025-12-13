@@ -1,0 +1,161 @@
+[gd_scene load_steps=32 format=3 uid="uid://b8rrpusgigwru"]
+
+[ext_resource type="Texture2D" uid="uid://dj7hbmf1t3tc4" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack1.png" id="1_8pqbs"]
+[ext_resource type="Texture2D" uid="uid://irfnagbjgk63" path="res://assets/Enemies/Melee Normal Robot/Stay/melee_normal_robot_stay.png" id="1_kvo4h"]
+[ext_resource type="Script" uid="uid://chxl3kqq5xni" path="res://scripts/Enemies/Melee Normal Robot/melee_normal_robot.gd" id="1_mm7j3"]
+[ext_resource type="Texture2D" uid="uid://bcjno4w3pcs10" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack2.png" id="2_mm7j3"]
+[ext_resource type="Texture2D" uid="uid://db2m8gwf57yq6" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack3.png" id="3_owja8"]
+[ext_resource type="Texture2D" uid="uid://dlwei404y82gd" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack4.png" id="4_2e6ss"]
+[ext_resource type="Texture2D" uid="uid://fpk1x7qicj3r" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack5.png" id="5_d83km"]
+[ext_resource type="Texture2D" uid="uid://ywumryjy0vf1" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack6.png" id="6_qob1n"]
+[ext_resource type="Texture2D" uid="uid://vcmm7uf4ena7" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack7.png" id="7_qyosm"]
+[ext_resource type="Texture2D" uid="uid://b63rylrfv1ika" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack8.png" id="8_ntp2j"]
+[ext_resource type="Texture2D" uid="uid://tutkpbo5cppx" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack9.png" id="9_8vrys"]
+[ext_resource type="Texture2D" uid="uid://bt2faioq1y73h" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack10.png" id="10_n4dv2"]
+[ext_resource type="Texture2D" uid="uid://dei8y4h47wyck" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack11.png" id="11_8wua4"]
+[ext_resource type="Texture2D" uid="uid://btirfvg8wgiit" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack12.png" id="12_7tf3h"]
+[ext_resource type="Texture2D" uid="uid://dpxrb4vn7gmrl" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack13.png" id="13_x5amt"]
+[ext_resource type="Texture2D" uid="uid://ca8j00yrr3x4c" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death1.png" id="14_5n6c3"]
+[ext_resource type="Texture2D" uid="uid://cjwp3dlt8w4rf" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death2.png" id="15_mkger"]
+[ext_resource type="Texture2D" uid="uid://b2ms2tidgybe3" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death3.png" id="16_37y5e"]
+[ext_resource type="Texture2D" uid="uid://bw6ne5a6dj3k4" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death4.png" id="17_yje01"]
+[ext_resource type="Texture2D" uid="uid://co3tcfh0wrebk" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death5.png" id="18_48ov6"]
+[ext_resource type="Texture2D" uid="uid://r3o4el5kmvxw" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death6.png" id="19_51rck"]
+[ext_resource type="Texture2D" uid="uid://dy0omja22w8co" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death7.png" id="20_06jyl"]
+[ext_resource type="Texture2D" uid="uid://o22v4hu030ea" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death8.png" id="21_ul0l1"]
+[ext_resource type="Texture2D" uid="uid://blwh3kni0c3v2" path="res://assets/Enemies/Melee Normal Robot/Death/melee_normal_robot_death9.png" id="22_1om3m"]
+[ext_resource type="Texture2D" uid="uid://blivxfosnyu22" path="res://assets/Enemies/Melee Normal Robot/Walk/melee_normal_robot_walk1.png" id="24_au5l7"]
+[ext_resource type="Texture2D" uid="uid://bjypst8ud4k73" path="res://assets/Enemies/Melee Normal Robot/Walk/melee_normal_robot_walk2.png" id="25_uvvyc"]
+[ext_resource type="Texture2D" uid="uid://cxsnjw1y0p3a5" path="res://assets/Enemies/Melee Normal Robot/Walk/melee_normal_robot_walk3.png" id="26_h4o5s"]
+[ext_resource type="Texture2D" uid="uid://cqy4lnvg3mtij" path="res://assets/Enemies/Melee Normal Robot/Walk/melee_normal_robot_walk4.png" id="27_3prbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pqbs"]
+size = Vector2(70, 101)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j1p54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8pqbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mm7j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_owja8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2e6ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d83km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qob1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qyosm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ntp2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8vrys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n4dv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8wua4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7tf3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_x5amt")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_5n6c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mkger")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_37y5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yje01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_48ov6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_51rck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_06jyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ul0l1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1om3m")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kvo4h")
+}],
+"loop": true,
+"name": &"Stay",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_au5l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_uvvyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_h4o5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3prbg")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm7j3"]
+size = Vector2(57, 59)
+
+[node name="MeleeNormalRobot" type="CharacterBody2D"]
+script = ExtResource("1_mm7j3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1.5)
+shape = SubResource("RectangleShape2D_8pqbs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -33)
+sprite_frames = SubResource("SpriteFrames_j1p54")
+animation = &"Attack"
+
+[node name="Hit" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hit"]
+position = Vector2(21.5, 14)
+shape = SubResource("RectangleShape2D_mm7j3")
+
+[connection signal="body_shape_entered" from="AnimatedSprite2D/Hit" to="." method="_on_hit_body_shape_entered"]
+[connection signal="body_shape_exited" from="AnimatedSprite2D/Hit" to="." method="_on_hit_body_shape_exited"]
