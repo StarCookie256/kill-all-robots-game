@@ -15,6 +15,12 @@ run/main_scene="uid://b73gu1pv76j3q"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+
 [dotnet]
 
 project/assembly_name="kill_all_robots_game"

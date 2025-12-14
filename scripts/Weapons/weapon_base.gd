@@ -6,6 +6,9 @@ class_name WeaponBase extends Node2D
 
 func shoot():
 	var bullet_instance: BulletBase = bullet.instantiate()
-	bullet_instance.direction = Vector2.from_angle(global_rotation)
+	
 	bullet_instance.global_position = bullet_spawnpoint.global_position
-	get_tree().root.get_node("Main/BulletsContainer").add_child(bullet_instance)
+	bullet_instance.direction = (bullet_spawnpoint.global_position
+		- global_position).normalized()
+
+	get_tree().current_scene.get_node("BulletsContainer").add_child(bullet_instance)

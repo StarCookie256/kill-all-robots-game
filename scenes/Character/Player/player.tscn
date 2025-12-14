@@ -53,11 +53,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fgnd"]
 size = Vector2(52, 107)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gun")]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 collision_mask = 4
 script = ExtResource("1_lp6qe")
-gun = NodePath("GunContainer/Pistol")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, -24)
@@ -76,6 +75,13 @@ zoom = Vector2(2, 2)
 [node name="NodeLeft" type="Node2D" parent="."]
 position = Vector2(22, -18)
 
+[node name="Weapon" type="Node2D" parent="NodeLeft"]
+position = Vector2(-12, 6)
+
+[node name="Pistol" parent="NodeLeft/Weapon" instance=ExtResource("8_lp6qe")]
+position = Vector2(26, 20)
+rotation = 1.55509
+
 [node name="HandLeft" type="Sprite2D" parent="NodeLeft"]
 position = Vector2(2, 18)
 texture = ExtResource("7_ld6e4")
@@ -84,13 +90,13 @@ flip_h = true
 [node name="NodeRight" type="Node2D" parent="."]
 position = Vector2(-8, -18)
 
+[node name="Weapon" type="Node2D" parent="NodeRight"]
+position = Vector2(18, 6)
+
+[node name="Pistol" parent="NodeRight/Weapon" instance=ExtResource("8_lp6qe")]
+position = Vector2(-12, 20)
+rotation = 1.55509
+
 [node name="HandRight" type="Sprite2D" parent="NodeRight"]
 position = Vector2(-2, 18)
 texture = ExtResource("7_ld6e4")
-
-[node name="GunContainer" type="Node2D" parent="."]
-position = Vector2(10, -12)
-
-[node name="Pistol" parent="GunContainer" instance=ExtResource("8_lp6qe")]
-position = Vector2(2.38419e-07, 24)
-rotation = 1.55509
