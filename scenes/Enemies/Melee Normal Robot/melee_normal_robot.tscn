@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://b8rrpusgigwru"]
+[gd_scene load_steps=33 format=3 uid="uid://nbf87ghm0axl"]
 
 [ext_resource type="Texture2D" uid="uid://dj7hbmf1t3tc4" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack1.png" id="1_8pqbs"]
 [ext_resource type="Texture2D" uid="uid://irfnagbjgk63" path="res://assets/Enemies/Melee Normal Robot/Stay/melee_normal_robot_stay.png" id="1_kvo4h"]
-[ext_resource type="Script" uid="uid://chxl3kqq5xni" path="res://scripts/Enemies/Melee Normal Robot/melee_normal_robot.gd" id="1_mm7j3"]
+[ext_resource type="PackedScene" uid="uid://0ptp8qkr0gx6" path="res://scenes/Enemies/enemy_base.tscn" id="1_owja8"]
+[ext_resource type="Script" uid="uid://cbxjeke7o4g25" path="res://scripts/Enemies/Melee Normal Robot/melee_normal_robot.gd" id="2_2e6ss"]
 [ext_resource type="Texture2D" uid="uid://bcjno4w3pcs10" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack2.png" id="2_mm7j3"]
 [ext_resource type="Texture2D" uid="uid://db2m8gwf57yq6" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack3.png" id="3_owja8"]
 [ext_resource type="Texture2D" uid="uid://dlwei404y82gd" path="res://assets/Enemies/Melee Normal Robot/Attack/melee_normal_robot_attack4.png" id="4_2e6ss"]
@@ -29,10 +30,10 @@
 [ext_resource type="Texture2D" uid="uid://cxsnjw1y0p3a5" path="res://assets/Enemies/Melee Normal Robot/Walk/melee_normal_robot_walk3.png" id="26_h4o5s"]
 [ext_resource type="Texture2D" uid="uid://cqy4lnvg3mtij" path="res://assets/Enemies/Melee Normal Robot/Walk/melee_normal_robot_walk4.png" id="27_3prbg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pqbs"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xq7x"]
 size = Vector2(70, 101)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_j1p54"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_pkbdd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -136,26 +137,28 @@ animations = [{
 "speed": 9.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm7j3"]
-size = Vector2(57, 59)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8xll"]
+size = Vector2(41, 55)
 
-[node name="MeleeNormalRobot" type="CharacterBody2D"]
-script = ExtResource("1_mm7j3")
+[node name="MeleeNormalRobot" instance=ExtResource("1_owja8")]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("2_2e6ss")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 1.5)
-shape = SubResource("RectangleShape2D_8pqbs")
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(2, -1.5)
+shape = SubResource("RectangleShape2D_7xq7x")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -33)
-sprite_frames = SubResource("SpriteFrames_j1p54")
-animation = &"Attack"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -36)
+sprite_frames = SubResource("SpriteFrames_pkbdd")
+animation = &"Stay"
 
-[node name="Hit" type="Area2D" parent="AnimatedSprite2D"]
+[node name="Hit" type="Area2D" parent="AnimatedSprite2D" index="0"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hit"]
-position = Vector2(21.5, 14)
-shape = SubResource("RectangleShape2D_mm7j3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hit" index="0"]
+position = Vector2(37, 15)
+shape = SubResource("RectangleShape2D_u8xll")
 
 [connection signal="body_shape_entered" from="AnimatedSprite2D/Hit" to="." method="_on_hit_body_shape_entered"]
 [connection signal="body_shape_exited" from="AnimatedSprite2D/Hit" to="." method="_on_hit_body_shape_exited"]

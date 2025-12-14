@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dyjun80rdi4fu"]
 
-[ext_resource type="Script" uid="uid://qv2w2stdr5ma" path="res://scenes/Character/Player/player.gd" id="1_lp6qe"]
+[ext_resource type="Script" uid="uid://qv2w2stdr5ma" path="res://scripts/character/Player/player.gd" id="1_lp6qe"]
 [ext_resource type="Texture2D" uid="uid://187itsa0c1pp" path="res://assets/Main Characters/Hero/hero_without_hand.png" id="2_3p026"]
 [ext_resource type="Texture2D" uid="uid://brgsrkapbqvjy" path="res://assets/Main Characters/Hero/hero walk/hero_walk_without_hand1.png" id="3_ld6e4"]
 [ext_resource type="Texture2D" uid="uid://4655tbqsqaw1" path="res://assets/Main Characters/Hero/START/hero_jump_start_without_hand1.png" id="3_qivy8"]

@@ -1,0 +1,190 @@
+[gd_scene load_steps=38 format=3 uid="uid://f2liw3ei76k5"]
+
+[ext_resource type="PackedScene" uid="uid://0ptp8qkr0gx6" path="res://scenes/Enemies/enemy_base.tscn" id="1_vmdpy"]
+[ext_resource type="Script" uid="uid://bkfgvfnhvpqnd" path="res://scripts/Enemies/Rocket Robot/rocket_robot.gd" id="2_pjg5w"]
+[ext_resource type="Texture2D" uid="uid://cad34co84ml8o" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack1.png" id="2_xfrsj"]
+[ext_resource type="Texture2D" uid="uid://docsmjviviwga" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack2.png" id="3_pjg5w"]
+[ext_resource type="Texture2D" uid="uid://bt3b6hyqq1uxr" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack3.png" id="4_bv36a"]
+[ext_resource type="Texture2D" uid="uid://cwwx60rq3k6cf" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack4.png" id="5_gyyc1"]
+[ext_resource type="Texture2D" uid="uid://bhv2eopkk8ss1" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack5.png" id="6_egqdg"]
+[ext_resource type="Texture2D" uid="uid://cmg5o2u41da0r" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack6.png" id="7_f3rp0"]
+[ext_resource type="Texture2D" uid="uid://cggsy31icauyq" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack7.png" id="8_q7dc7"]
+[ext_resource type="Texture2D" uid="uid://d1v3f1rfdy4aj" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack8.png" id="9_jatqf"]
+[ext_resource type="Texture2D" uid="uid://kogiedj4bv3h" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack9.png" id="10_hqctu"]
+[ext_resource type="Texture2D" uid="uid://dkx38u3ho818s" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack10.png" id="11_ujsyb"]
+[ext_resource type="Texture2D" uid="uid://hlq21flj5808" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack11.png" id="12_yx5ub"]
+[ext_resource type="Texture2D" uid="uid://qwhm5eeh327m" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack12.png" id="13_p2ita"]
+[ext_resource type="Texture2D" uid="uid://dfcn5mp8nn6l8" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack13.png" id="14_4cw0a"]
+[ext_resource type="Texture2D" uid="uid://4ncpls0512wx" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack14.png" id="15_wpqf0"]
+[ext_resource type="Texture2D" uid="uid://qe8c773aqtpd" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack15.png" id="16_lyrk1"]
+[ext_resource type="Texture2D" uid="uid://bvnguvd7cdt4t" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack16.png" id="17_t27fj"]
+[ext_resource type="Texture2D" uid="uid://cr3kesx0wp1kl" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack17.png" id="18_3pa51"]
+[ext_resource type="Texture2D" uid="uid://ltp30cpst6bb" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack18.png" id="19_wru0s"]
+[ext_resource type="Texture2D" uid="uid://borbklrmpy75r" path="res://assets/Enemies/Rocket Robot/Attack/rocket_robot_attack19.png" id="20_v21fq"]
+[ext_resource type="Texture2D" uid="uid://cih42tersi4h8" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death1.png" id="21_puu74"]
+[ext_resource type="Texture2D" uid="uid://cb1oh8dwvf1x3" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death2.png" id="22_8bav3"]
+[ext_resource type="Texture2D" uid="uid://frd0txwbxnff" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death3.png" id="23_5w4gm"]
+[ext_resource type="Texture2D" uid="uid://cohypfnv2504" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death4.png" id="24_jbbmw"]
+[ext_resource type="Texture2D" uid="uid://bjhhgbnktromb" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death5.png" id="25_eshxj"]
+[ext_resource type="Texture2D" uid="uid://dkfpiosrh1wn7" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death6.png" id="26_3ofm7"]
+[ext_resource type="Texture2D" uid="uid://c8xncelrmg0cy" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death7.png" id="27_hwrjr"]
+[ext_resource type="Texture2D" uid="uid://c7bvckqim8xdp" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death8.png" id="28_1xwl1"]
+[ext_resource type="Texture2D" uid="uid://ijcloqjpx1qo" path="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death9.png" id="29_0kjf5"]
+[ext_resource type="Texture2D" uid="uid://b7pkqvu4tx0g5" path="res://assets/Enemies/Rocket Robot/Stay/rocket_robot_stay.png" id="30_5pbe5"]
+[ext_resource type="Texture2D" uid="uid://ccour738rb1bo" path="res://assets/Enemies/Rocket Robot/Walk/rocket_robot_walk1.png" id="31_xpay8"]
+[ext_resource type="Texture2D" uid="uid://djqtt1fpw3s0w" path="res://assets/Enemies/Rocket Robot/Walk/rocket_robot_walk2.png" id="32_tuius"]
+[ext_resource type="Texture2D" uid="uid://blsr6juobjym3" path="res://assets/Enemies/Rocket Robot/Walk/rocket_robot_walk3.png" id="33_xegxo"]
+[ext_resource type="Texture2D" uid="uid://dn7tog0f5383c" path="res://assets/Enemies/Rocket Robot/Walk/rocket_robot_walk4.png" id="34_5rbf2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kv7cv"]
+size = Vector2(71, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hj74n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xfrsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pjg5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bv36a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gyyc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_egqdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f3rp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q7dc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jatqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hqctu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ujsyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yx5ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_p2ita")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4cw0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wpqf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lyrk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_t27fj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3pa51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wru0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_v21fq")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_puu74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8bav3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5w4gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jbbmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_eshxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3ofm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hwrjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1xwl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0kjf5")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_5pbe5")
+}],
+"loop": true,
+"name": &"Stay",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_xpay8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_tuius")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_xegxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5rbf2")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 6.0
+}]
+
+[node name="RocketRobot" instance=ExtResource("1_vmdpy")]
+script = ExtResource("2_pjg5w")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(2.5, -3)
+shape = SubResource("RectangleShape2D_kv7cv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -41)
+sprite_frames = SubResource("SpriteFrames_hj74n")
+animation = &"Attack"
+frame = 9
+
+[node name="ShotMarkerLeft" type="Marker2D" parent="AnimatedSprite2D" index="0"]
+position = Vector2(-51, 1)
+
+[node name="ShotMarkerRight" type="Marker2D" parent="AnimatedSprite2D" index="1"]
+position = Vector2(53, 2)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="2"]
+rect = Rect2(-33, -37, 71, 68)
+
+[node name="AttackStartTimer" type="Timer" parent="." index="3"]
+one_shot = true
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

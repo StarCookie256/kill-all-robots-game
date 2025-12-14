@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cohypfnv2504"
-path="res://.godot/imported/rocket_robot_death4.png-97716c364e3dbcae8c21109ff5a05289.ctex"
+uid="uid://vtvc77ja17yn"
+path="res://.godot/imported/rocket_robot_rocket.png-ee01bc0b5702f3be94eefe4f93bb7250.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemies/Rocket Robot/Death/rocket_robot_death4.png"
-dest_files=["res://.godot/imported/rocket_robot_death4.png-97716c364e3dbcae8c21109ff5a05289.ctex"]
+source_file="res://assets/Enemies/Rocket Robot/Rocket/rocket_robot_rocket.png"
+dest_files=["res://.godot/imported/rocket_robot_rocket.png-ee01bc0b5702f3be94eefe4f93bb7250.ctex"]
 
 [params]
 

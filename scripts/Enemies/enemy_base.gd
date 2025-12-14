@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-@export var SPEED :float = 120
-@export var HP :float = 100
-@export var DEF :float = 0
-@export var DMG :float = 5
+@export var SPEED: float = 120
+@export var HP: float = 100
+@export var DEF: float = 0
+@export var DMG: float = 5
 
 @onready var sprite := $AnimatedSprite2D
 @onready var player := $"../Player" 
