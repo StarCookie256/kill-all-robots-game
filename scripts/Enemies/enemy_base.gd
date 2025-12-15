@@ -1,7 +1,8 @@
-extends CharacterBody2D
+class_name Enemy extends CharacterBody2D
 
 @export var SPEED: float = 120
-@export var HP: float = 100
+@export var HP: float = 10
+@export var MAX_HP: float = 10
 @export var DEF: float = 0
 @export var DMG: float = 5
 
@@ -9,13 +10,17 @@ extends CharacterBody2D
 @onready var player := $"../Player" 
 @onready var stopAll := false
 @onready var playerExited := true
+@onready var hp_bar = $TextureProgressBar
 
 func _ready() -> void:
-	pass # Replace with function body.
+	hp_bar.max_value = MAX_HP
 
 func _physics_process(delta: float) -> void:
+	hp_bar.value = HP
 	if stopAll:
 		return
+	if HP <= 0:
+		await _die()
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
@@ -25,9 +30,9 @@ func _move() -> void:
 # Определяем направление к игроку
 	var direction = 0
 	if player:
-		if player.global_position.x > global_position.x+10:
+		if player.global_position.x > global_position.x+5:
 			direction = 1  # идем вправо
-		elif player.global_position.x < global_position.x-10  :
+		elif player.global_position.x < global_position.x-5:
 			direction = -1  # идем влево
 
 	# Движение
@@ -42,3 +47,16 @@ func _move() -> void:
 
 func _attack() -> void:
 	print("Попался халяль")
+
+
+func _take_damage(damage: float) -> void:
+	print('АААААААААААААААААААААААААААААААААААЙ')
+	HP -= damage
+
+
+func _die() -> void:
+	stopAll = true
+	sprite.play("Death")
+	await sprite.animation_finished
+	sprite.stop()
+	queue_free()

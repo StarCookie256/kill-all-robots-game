@@ -36,9 +36,6 @@
 [ext_resource type="Texture2D" uid="uid://blsr6juobjym3" path="res://assets/Enemies/Rocket Robot/Walk/rocket_robot_walk3.png" id="33_xegxo"]
 [ext_resource type="Texture2D" uid="uid://dn7tog0f5383c" path="res://assets/Enemies/Rocket Robot/Walk/rocket_robot_walk4.png" id="34_5rbf2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kv7cv"]
-size = Vector2(71, 68)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_hj74n"]
 animations = [{
 "frames": [{
@@ -161,18 +158,16 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfrsj"]
+size = Vector2(71, 68)
+
 [node name="RocketRobot" instance=ExtResource("1_vmdpy")]
 script = ExtResource("2_pjg5w")
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(2.5, -3)
-shape = SubResource("RectangleShape2D_kv7cv")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, -41)
 sprite_frames = SubResource("SpriteFrames_hj74n")
-animation = &"Attack"
-frame = 9
+animation = &"Death"
 
 [node name="ShotMarkerLeft" type="Marker2D" parent="AnimatedSprite2D" index="0"]
 position = Vector2(-51, 1)
@@ -180,11 +175,21 @@ position = Vector2(-51, 1)
 [node name="ShotMarkerRight" type="Marker2D" parent="AnimatedSprite2D" index="1"]
 position = Vector2(53, 2)
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="2"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="1"]
 rect = Rect2(-33, -37, 71, 68)
 
-[node name="AttackStartTimer" type="Timer" parent="." index="3"]
+[node name="AttackStartTimer" type="Timer" parent="." index="2"]
 one_shot = true
+
+[node name="CollisionShape2D" parent="." index="3"]
+position = Vector2(2.5, -3)
+shape = SubResource("RectangleShape2D_xfrsj")
+
+[node name="TextureProgressBar" parent="." index="4"]
+offset_left = -22.0
+offset_top = -48.0
+offset_right = 22.0
+offset_bottom = -39.0
 
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

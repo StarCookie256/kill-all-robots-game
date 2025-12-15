@@ -30,9 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://cxsnjw1y0p3a5" path="res://assets/Enemies/Melee Normal Robot/Walk/melee_normal_robot_walk3.png" id="26_h4o5s"]
 [ext_resource type="Texture2D" uid="uid://cqy4lnvg3mtij" path="res://assets/Enemies/Melee Normal Robot/Walk/melee_normal_robot_walk4.png" id="27_3prbg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xq7x"]
-size = Vector2(70, 101)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_pkbdd"]
 animations = [{
 "frames": [{
@@ -138,27 +135,40 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8xll"]
-size = Vector2(41, 55)
+size = Vector2(37.5, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owja8"]
+size = Vector2(69, 101)
 
 [node name="MeleeNormalRobot" instance=ExtResource("1_owja8")]
-collision_layer = 2
-collision_mask = 4
 script = ExtResource("2_2e6ss")
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(2, -1.5)
-shape = SubResource("RectangleShape2D_7xq7x")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, -36)
 sprite_frames = SubResource("SpriteFrames_pkbdd")
 animation = &"Stay"
 
-[node name="Hit" type="Area2D" parent="AnimatedSprite2D" index="0"]
+[node name="HitLeft" type="Area2D" parent="AnimatedSprite2D" index="0"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Hit" index="0"]
+[node name="HitColllisionLeft" type="CollisionShape2D" parent="AnimatedSprite2D/HitLeft" index="0"]
+position = Vector2(-31.25, 15)
+shape = SubResource("RectangleShape2D_u8xll")
+
+[node name="HitRight" type="Area2D" parent="AnimatedSprite2D" index="1"]
+
+[node name="HitCollisionsRight" type="CollisionShape2D" parent="AnimatedSprite2D/HitRight" index="0"]
 position = Vector2(37, 15)
 shape = SubResource("RectangleShape2D_u8xll")
 
-[connection signal="body_shape_entered" from="AnimatedSprite2D/Hit" to="." method="_on_hit_body_shape_entered"]
-[connection signal="body_shape_exited" from="AnimatedSprite2D/Hit" to="." method="_on_hit_body_shape_exited"]
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(1.5, -1.5)
+shape = SubResource("RectangleShape2D_owja8")
+
+[node name="TextureProgressBar" parent="." index="2"]
+offset_top = -64.0
+offset_bottom = -54.0
+
+[connection signal="body_shape_entered" from="AnimatedSprite2D/HitLeft" to="." method="_on_hit_body_shape_entered"]
+[connection signal="body_shape_exited" from="AnimatedSprite2D/HitLeft" to="." method="_on_hit_body_shape_exited"]
+[connection signal="body_shape_entered" from="AnimatedSprite2D/HitRight" to="." method="_on_hit_body_shape_entered"]
+[connection signal="body_shape_exited" from="AnimatedSprite2D/HitRight" to="." method="_on_hit_body_shape_exited"]

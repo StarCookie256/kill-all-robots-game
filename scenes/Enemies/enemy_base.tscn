@@ -1,13 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://0ptp8qkr0gx6"]
+[gd_scene load_steps=6 format=3 uid="uid://0ptp8qkr0gx6"]
 
 [ext_resource type="Script" uid="uid://ieujenpf7ljl" path="res://scripts/Enemies/enemy_base.gd" id="1_h8mu4"]
+[ext_resource type="Texture2D" uid="uid://6f7puf5ix8me" path="res://assets/Enemy HP Bar/Sprite-0003.png" id="2_y7qu8"]
+[ext_resource type="Texture2D" uid="uid://b48l4f3w671h2" path="res://assets/Enemy HP Bar/Sprite-0001.png" id="3_h1n3s"]
+[ext_resource type="Texture2D" uid="uid://s036ohx5jf0r" path="res://assets/Enemy HP Bar/Sprite-0002 (1).png" id="4_7g64e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8mu4"]
+size = Vector2(44, 62)
 
 [node name="EnemyBase" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 12
 script = ExtResource("1_h8mu4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_h8mu4")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -23.0
+offset_top = -59.0
+offset_right = 21.0
+offset_bottom = -49.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_y7qu8")
+texture_over = ExtResource("3_h1n3s")
+texture_progress = ExtResource("4_7g64e")
+tint_progress = Color(0.05882353, 1, 0, 1)

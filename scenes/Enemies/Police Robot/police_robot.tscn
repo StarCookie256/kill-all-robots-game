@@ -1,0 +1,188 @@
+[gd_scene load_steps=32 format=3 uid="uid://bodxgotu7opon"]
+
+[ext_resource type="PackedScene" uid="uid://0ptp8qkr0gx6" path="res://scenes/Enemies/enemy_base.tscn" id="1_7agyt"]
+[ext_resource type="Script" uid="uid://18n2s1l8mip1" path="res://scripts/Enemies/Police Robot/police_robot.gd" id="2_paqwq"]
+[ext_resource type="Texture2D" uid="uid://dumg15mu545je" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack1.png" id="3_heaxh"]
+[ext_resource type="Texture2D" uid="uid://drqplskexs527" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack2.png" id="4_qdj0e"]
+[ext_resource type="Texture2D" uid="uid://djeyelo727fx5" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack3.png" id="5_6o76l"]
+[ext_resource type="Texture2D" uid="uid://cbgrkerf4ky30" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack4.png" id="6_cqliv"]
+[ext_resource type="Texture2D" uid="uid://bi6s8p3r5gg4y" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack5.png" id="7_5wgxf"]
+[ext_resource type="Texture2D" uid="uid://cym38yi4l5qw3" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack6.png" id="8_hb5ou"]
+[ext_resource type="Texture2D" uid="uid://c06u2q412cmlk" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack7.png" id="9_qskyj"]
+[ext_resource type="Texture2D" uid="uid://dymjaln4c238e" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack8.png" id="10_0xdon"]
+[ext_resource type="Texture2D" uid="uid://b5hsw5al84ou0" path="res://assets/Enemies/Police Robot/Attack/police_robot_attack9.png" id="11_qpfc7"]
+[ext_resource type="Texture2D" uid="uid://bhfco2250bixu" path="res://assets/Enemies/Police Robot/Death/police_robot_death1.png" id="12_nf454"]
+[ext_resource type="Texture2D" uid="uid://beh86s1lnm525" path="res://assets/Enemies/Police Robot/Death/police_robot_death2.png" id="13_67rk1"]
+[ext_resource type="Texture2D" uid="uid://ce62mwppxxtv" path="res://assets/Enemies/Police Robot/Death/police_robot_death3.png" id="14_bh3hu"]
+[ext_resource type="Texture2D" uid="uid://jxdxcjq35m1i" path="res://assets/Enemies/Police Robot/Death/police_robot_death4.png" id="15_euq1l"]
+[ext_resource type="Texture2D" uid="uid://i53uqne3omul" path="res://assets/Enemies/Police Robot/Death/police_robot_death5.png" id="16_c7er3"]
+[ext_resource type="Texture2D" uid="uid://boe3rq6o37qsq" path="res://assets/Enemies/Police Robot/Death/police_robot_death6.png" id="17_ryq48"]
+[ext_resource type="Texture2D" uid="uid://cn2e6trjki5ml" path="res://assets/Enemies/Police Robot/Death/police_robot_death7.png" id="18_bg2mk"]
+[ext_resource type="Texture2D" uid="uid://b8b23ywlesfn4" path="res://assets/Enemies/Police Robot/Start Attack/police_robot_start_attack1.png" id="19_uqlky"]
+[ext_resource type="Texture2D" uid="uid://duja3xxt33ap3" path="res://assets/Enemies/Police Robot/Start Attack/police_robot_start_attack2.png" id="20_2ypb0"]
+[ext_resource type="Texture2D" uid="uid://cxf2hw65bprjv" path="res://assets/Enemies/Police Robot/Start Attack/police_robot_start_attack3.png" id="21_egoui"]
+[ext_resource type="Texture2D" uid="uid://dvbyldq4oipn7" path="res://assets/Enemies/Police Robot/Start Attack/police_robot_start_attack4.png" id="22_y0psv"]
+[ext_resource type="Texture2D" uid="uid://cbl5hqyjdwjxc" path="res://assets/Enemies/Police Robot/Stay/police_robot_stay.png" id="23_0h06s"]
+[ext_resource type="Texture2D" uid="uid://l6ju3x8bjwac" path="res://assets/Enemies/Police Robot/Walk/police_robot_walk1.png" id="24_rwwq7"]
+[ext_resource type="Texture2D" uid="uid://bvoshty6ourd" path="res://assets/Enemies/Police Robot/Walk/police_robot_walk2.png" id="25_ouhjx"]
+[ext_resource type="Texture2D" uid="uid://b70xcp8v1gr26" path="res://assets/Enemies/Police Robot/Walk/police_robot_walk3.png" id="26_20483"]
+[ext_resource type="Texture2D" uid="uid://b756tjiucky6l" path="res://assets/Enemies/Police Robot/Walk/police_robot_walk4.png" id="27_o5aen"]
+[ext_resource type="Texture2D" uid="uid://bvoy352xhvhm7" path="res://assets/Enemies/Police Robot/Walk/police_robot_walk5.png" id="28_gdp0o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_paqwq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_heaxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qdj0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6o76l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cqliv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5wgxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hb5ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qskyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0xdon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qpfc7")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_nf454")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_67rk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bh3hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_euq1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_c7er3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ryq48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bg2mk")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_uqlky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2ypb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_egoui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_y0psv")
+}],
+"loop": true,
+"name": &"Start Attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_0h06s")
+}],
+"loop": true,
+"name": &"Stay",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_rwwq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ouhjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_20483")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_o5aen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_gdp0o")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_heaxh"]
+radius = 17.0
+height = 36.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_heaxh"]
+size = Vector2(552, 60)
+
+[node name="PoliceRobot" instance=ExtResource("1_7agyt")]
+script = ExtResource("2_paqwq")
+CHARGE_SPEED = 500.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(-1, -28)
+sprite_frames = SubResource("SpriteFrames_paqwq")
+animation = &"Death"
+
+[node name="HitBox" type="Area2D" parent="." index="1"]
+
+[node name="HitBoxArea" type="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_heaxh")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_heaxh")
+
+[node name="TextureProgressBar" parent="." index="3"]
+offset_left = -22.0
+offset_top = -29.0
+offset_right = 22.0
+offset_bottom = -24.0
+
+[node name="Vision" type="Area2D" parent="." index="4"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vision" index="0"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_heaxh")
+
+[node name="DetectionAnimTimer" type="Timer" parent="." index="5"]
+wait_time = 0.5
+one_shot = true
+
+[node name="ChargeAnimTimer" type="Timer" parent="." index="6"]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_shape_entered" from="Vision" to="." method="_on_vision_body_shape_entered"]
+[connection signal="timeout" from="DetectionAnimTimer" to="." method="_on_detection_anim_timer_timeout"]
+[connection signal="timeout" from="ChargeAnimTimer" to="." method="_on_charge_anim_timer_timeout"]

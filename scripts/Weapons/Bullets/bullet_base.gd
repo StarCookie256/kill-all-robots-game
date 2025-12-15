@@ -7,6 +7,7 @@ class_name BulletBase extends Area2D
 func _process(delta: float) -> void:
 	global_position += direction * speed * delta
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
 	# код для нанесения урона
-	pass # Replace with function body.
+	if body is Enemy:
+		body._take_damage(damage)

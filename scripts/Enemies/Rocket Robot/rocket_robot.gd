@@ -5,8 +5,13 @@ extends "res://scripts/Enemies/enemy_base.gd"
 @onready var attackStartTimer = $AttackStartTimer
 
 func _attack() -> void:
-	shotMarker = $AnimatedSprite2D/ShotMarkerLeft if sprite.flip_h else $AnimatedSprite2D/ShotMarkerRight
-	while !playerExited:
+	while !playerExited && HP > 0:
+		if player.global_position.x > global_position.x+10:
+			sprite.flip_h = false
+		elif player.global_position.x < global_position.x-10:
+			sprite.flip_h = true
+		shotMarker = $AnimatedSprite2D/ShotMarkerLeft if sprite.flip_h else $AnimatedSprite2D/ShotMarkerRight
+		
 		sprite.play("Attack")
 		
 		# ждем когда робот подымет пушку для выпуска снаряда

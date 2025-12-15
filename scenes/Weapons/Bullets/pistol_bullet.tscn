@@ -1,18 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://hrmmo12i341p"]
 
-[ext_resource type="Script" uid="uid://bjudu1aq0ydja" path="res://scripts/Weapons/Bullets/bullet_base.gd" id="1_nnio6"]
+[ext_resource type="PackedScene" uid="uid://cws6hhkk807yi" path="res://scenes/Weapons/Bullets/bullet_base.tscn" id="1_2tlax"]
 [ext_resource type="Texture2D" uid="uid://7r8wghwudn5l" path="res://assets/Weapon/bullet_default.png" id="2_2tlax"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tlax"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oqbf"]
 size = Vector2(9.5, 9.25)
 
-[node name="PistolBullet" type="Area2D"]
-script = ExtResource("1_nnio6")
-metadata/_custom_type_script = "uid://bjudu1aq0ydja"
+[node name="PistolBullet" instance=ExtResource("1_2tlax")]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_2tlax")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_2tlax")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_8oqbf")
