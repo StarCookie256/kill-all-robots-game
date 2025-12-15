@@ -13,13 +13,13 @@ func _attack() -> void:
 		attackStartTimer.start() 
 		await attackStartTimer.timeout
 		
-		var pos:Vector2 = player.global_position
-		var direction:Vector2 = (pos - global_position).normalized()
+		var player_pos:Vector2 = player.global_position
 		var rocket = rocket_scene.instantiate()
 		get_parent().add_child(rocket)
 		
 		rocket.global_position = shotMarker.global_position
-		rocket.initial_velocity = direction
+		#rocket.rotation = shotMarker.rotation
+		rocket.shoot(player_pos)
 		
 		await sprite.animation_finished
 		sprite.stop()
