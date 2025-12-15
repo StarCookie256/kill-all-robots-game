@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://b73gu1pv76j3q"]
+[gd_scene load_steps=8 format=4 uid="uid://b73gu1pv76j3q"]
 
 [ext_resource type="PackedScene" uid="uid://dyjun80rdi4fu" path="res://scenes/Character/Player/player.tscn" id="1_gol0p"]
 [ext_resource type="Script" uid="uid://cvnjgo0msl4og" path="res://scripts/Main/main.gd" id="1_px18m"]
 [ext_resource type="Texture2D" uid="uid://bdpj1y4wjmpca" path="res://assets/Terrain/Terrain (16x16).png" id="2_br8qb"]
+[ext_resource type="PackedScene" uid="uid://f2liw3ei76k5" path="res://scenes/Enemies/Rocket Robot/rocket_robot.tscn" id="6_nyu32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_px18m"]
 texture = ExtResource("2_br8qb")
@@ -207,5 +208,23 @@ position = Vector2(13, 350)
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="RocketRobot" parent="." instance=ExtResource("6_nyu32")]
+position = Vector2(159, 341)
+
+[node name="RocketRobot3" parent="." instance=ExtResource("6_nyu32")]
+position = Vector2(905, 343)
+
+[node name="RocketRobot2" parent="." instance=ExtResource("6_nyu32")]
+position = Vector2(298, 343)
+
+[node name="RocketRobot4" parent="." instance=ExtResource("6_nyu32")]
+position = Vector2(760, 342)
+
+[node name="RocketRobot5" parent="." instance=ExtResource("6_nyu32")]
+position = Vector2(421, 341)
+
+[node name="RocketRobot6" parent="." instance=ExtResource("6_nyu32")]
+position = Vector2(547, 344)
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
