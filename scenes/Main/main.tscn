@@ -206,7 +206,7 @@ position = Vector2(1132, 355)
 position = Vector2(13, 350)
 
 [node name="MobTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.0
 autostart = true
 
 [node name="RocketRobot" parent="." instance=ExtResource("6_nyu32")]
