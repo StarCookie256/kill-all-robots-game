@@ -2,6 +2,7 @@ extends "res://scripts/Enemies/enemy_base.gd"
 
 @onready var leftAttack = $AnimatedSprite2D/HitLeft
 @onready var rightAttack = $AnimatedSprite2D/HitRight
+@onready var playerHitTimer = $PlayerHitTimer
 
 func _physics_process(delta: float) -> void:
 	hp_bar.value = HP
@@ -31,6 +32,12 @@ func _attack() -> void:
 	
 	while !playerExited && HP > 0:
 		sprite.play("Attack")
+		
+		playerHitTimer.start()
+		await playerHitTimer.timeout
+		if !playerExited:
+			Global._on_hero_taked_damage.emit(DMG)
+		
 		await sprite.animation_finished
 		sprite.stop()
 

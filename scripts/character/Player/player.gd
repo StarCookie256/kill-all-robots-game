@@ -3,9 +3,13 @@ class_name Player extends CharacterBody2D
 const SPEED = 300
 const JUMP_VELOCITY = 400
 
+@export var HP = 100
+@export var HUD: CanvasLayer
+
 @onready var sprite := $AnimatedSprite2D
 @onready var left_hand: Node2D = $NodeLeft
 @onready var right_hand: Node2D = $NodeRight
+@onready var camera: = $Camera2D
 
 var direction := 0
 var facing_left := false
@@ -13,8 +17,10 @@ var current_hand: Node2D  # ← Тип Node2D, не WeaponBase
 
 func _ready() -> void:
 	current_hand = right_hand
+	Global._on_hero_taked_damage.connect(_on_damage_received)
 
 func _physics_process(delta: float) -> void:
+	HUD.set_hp(HP)
 	direction = Input.get_axis("move_left", "move_right")
 	
 	if not is_on_floor():
@@ -68,3 +74,7 @@ func _input(event: InputEvent) -> void:
 		var gun := current_hand.get_node("Weapon/Pistol") as WeaponBase
 		if gun:
 			gun.shoot()
+
+
+func _on_damage_received(damage: int) -> void:
+	HP -= damage

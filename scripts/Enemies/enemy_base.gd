@@ -47,6 +47,7 @@ func _move() -> void:
 
 func _attack() -> void:
 	print("Попался халяль")
+	Global._on_hero_taked_damage.emit(DMG)
 
 
 func _take_damage(damage: float) -> void:

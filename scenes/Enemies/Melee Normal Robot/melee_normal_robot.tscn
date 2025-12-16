@@ -141,6 +141,7 @@ size = Vector2(37.5, 55)
 size = Vector2(69, 101)
 
 [node name="MeleeNormalRobot" instance=ExtResource("1_owja8")]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("2_2e6ss")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
@@ -168,7 +169,13 @@ shape = SubResource("RectangleShape2D_owja8")
 offset_top = -64.0
 offset_bottom = -54.0
 
+[node name="PlayerHitTimer" type="Timer" parent="." index="3"]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="body_entered" from="AnimatedSprite2D/HitLeft" to="." method="_on_hit_player_entered"]
 [connection signal="body_shape_entered" from="AnimatedSprite2D/HitLeft" to="." method="_on_hit_body_shape_entered"]
 [connection signal="body_shape_exited" from="AnimatedSprite2D/HitLeft" to="." method="_on_hit_body_shape_exited"]
+[connection signal="body_entered" from="AnimatedSprite2D/HitRight" to="." method="_on_hit_player_entered"]
 [connection signal="body_shape_entered" from="AnimatedSprite2D/HitRight" to="." method="_on_hit_body_shape_entered"]
 [connection signal="body_shape_exited" from="AnimatedSprite2D/HitRight" to="." method="_on_hit_body_shape_exited"]

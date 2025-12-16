@@ -7,7 +7,13 @@ extends "res://scripts/Enemies/enemy_base.gd"
 @onready var charging: bool = false
 @onready var charge_direction: int = 1
 @onready var detected: bool = false
+@onready var hitBox = $HitBox
 
+func _ready() -> void:
+	hp_bar.max_value = MAX_HP
+	DMG = 10
+	hitBox.monitorable = false
+	hitBox.monitoring = false
 
 func _physics_process(delta: float) -> void:
 	hp_bar.value = HP
@@ -42,6 +48,8 @@ func _on_vision_body_shape_entered(_body_rid: RID, body: Node2D, _body_shape_ind
 func _on_detection_anim_timer_timeout() -> void:
 	stopAll = false
 	charging = true
+	hitBox.monitorable = true
+	hitBox.monitoring = true
 	chargeAnimTimer.start()
 
 
@@ -65,4 +73,5 @@ func _on_charge_anim_timer_timeout() -> void:
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body is Player:
 		HP = 0
+		Global._on_hero_taked_damage.emit(DMG)
 		await _die()

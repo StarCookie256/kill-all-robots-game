@@ -157,6 +157,7 @@ size = Vector2(55, 75)
 size = Vector2(68, 98)
 
 [node name="MeleeWreckedRobot" instance=ExtResource("1_lxh8y")]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("2_obsab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
@@ -184,6 +185,10 @@ offset_left = -20.0
 offset_top = -25.0
 offset_right = 24.0
 offset_bottom = -15.0
+
+[node name="PlayerHitTimer" type="Timer" parent="." index="3"]
+wait_time = 0.4
+one_shot = true
 
 [connection signal="body_shape_entered" from="AnimatedSprite2D/HitRight" to="." method="_on_hit_body_shape_entered"]
 [connection signal="body_shape_exited" from="AnimatedSprite2D/HitRight" to="." method="_on_hit_body_shape_exited"]
