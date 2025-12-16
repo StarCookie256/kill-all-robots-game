@@ -54,10 +54,10 @@ func _update_aim() -> void:
 	var angle := direction_to_mouse.angle()
 	
 	if facing_left:
-		current_hand.rotation = angle +90
+		current_hand.rotation = angle + PI / 2
 		current_hand.scale.y = -1
 	else:
-		current_hand.rotation = angle - 90
+		current_hand.rotation = angle - PI / 2
 		current_hand.scale.y = 1
 
 func _update_animations() -> void:

@@ -54,7 +54,7 @@ animations = [{
 size = Vector2(52, 107)
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 collision_mask = 4
 script = ExtResource("1_lp6qe")
 
@@ -70,7 +70,7 @@ position = Vector2(8, 2.5)
 shape = SubResource("RectangleShape2D_8fgnd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="NodeLeft" type="Node2D" parent="."]
 position = Vector2(22, -18)
