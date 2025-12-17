@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://l12rxe2rxn8h"]
+
+[sub_resource type="Animation" id="Animation_o38oh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TakedDamageLabel:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TakedDamageLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(200, 200)]
+}
+
+[sub_resource type="Animation" id="Animation_rr8ot"]
+resource_name = "player_damage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TakedDamageLabel:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TakedDamageLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(200, 200), Vector2(200, 20)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_43lqu"]
+_data = {
+&"RESET": SubResource("Animation_o38oh"),
+&"player_damage": SubResource("Animation_rr8ot")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_onu81"]
+font_size = 65
+
+[node name="PlayerTakedDamage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TakedDamageControl" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 80)
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 90.0
+
+[node name="TakedDamageAnim" type="AnimationPlayer" parent="TakedDamageControl"]
+libraries = {
+&"": SubResource("AnimationLibrary_43lqu")
+}
+
+[node name="TakedDamageLabel" type="Label" parent="TakedDamageControl"]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 295.0
+offset_bottom = 290.00006
+grow_vertical = 2
+text = "-10"
+label_settings = SubResource("LabelSettings_onu81")

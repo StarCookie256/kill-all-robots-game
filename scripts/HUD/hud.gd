@@ -2,12 +2,10 @@ extends CanvasLayer
 
 @export var MAX_VALUE: int =  100
 
-@onready var takenDamageAnim = $Control/TakedDamageControl/TakedDamageAnim
-@onready var takenDamageLabel = $Control/TakedDamageControl/TakedDamageLabel
+@onready var playerTakedDamageScene = preload("res://scenes/HUD/player_taked_damage.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	takenDamageLabel.visible = false
 	Global._on_hero_taked_damage.connect(_taked_damage_anim)
 
 
@@ -19,8 +17,9 @@ func set_hp(new_hp) -> void:
 	%HeroHP.value = 100.0/MAX_VALUE * new_hp
 
 func _taked_damage_anim(damage: int) -> void:
-	takenDamageLabel.visible = true
-	takenDamageLabel.text = "- "+str(damage)
-	takenDamageAnim.play("player_damage")
-	await takenDamageAnim.animation_finished
-	takenDamageLabel.visible = false
+	var newLabel = playerTakedDamageScene.instantiate()
+	add_child(newLabel)
+	newLabel.get_node("TakedDamageControl/TakedDamageLabel").text = "- "+str(damage)
+	newLabel.get_node("TakedDamageControl/TakedDamageAnim").play("player_damage")
+	await newLabel.get_node("TakedDamageControl/TakedDamageAnim").animation_finished
+	newLabel.queue_free()
