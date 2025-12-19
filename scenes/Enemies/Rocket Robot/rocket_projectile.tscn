@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b34yw4oe4eypf"]
+[gd_scene load_steps=15 format=3 uid="uid://b34yw4oe4eypf"]
 
 [ext_resource type="Script" uid="uid://c5sxypfy6x443" path="res://scripts/Enemies/Rocket Robot/rocket_projectile.gd" id="1_d5o56"]
 [ext_resource type="Texture2D" uid="uid://vtvc77ja17yn" path="res://assets/Enemies/Rocket Robot/Rocket/rocket_robot_rocket.png" id="2_2mw3k"]
@@ -50,6 +50,9 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0qt40"]
+radius = 53.009434
+
 [node name="RocketProjectile" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 4
@@ -65,5 +68,14 @@ shape = SubResource("RectangleShape2D_ltqtn")
 position = Vector2(-6, 11)
 sprite_frames = SubResource("SpriteFrames_3b2ef")
 animation = &"Explode"
+frame = 4
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(-2, 2)
+shape = SubResource("CircleShape2D_0qt40")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

@@ -6,6 +6,7 @@ extends RigidBody2D
 
 @onready var sprite = $Sprite2D
 @onready var spriteAnimation = $AnimatedSprite2D
+@onready var hitArea = $HitArea
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,6 +14,8 @@ func _ready() -> void:
 	# Включаем отслеживание столкновений
 	contact_monitor = true
 	max_contacts_reported = 1
+	hitArea.monitorable = false
+	hitArea.monitoring = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -71,9 +74,18 @@ func _calculate_arc_height_for_target(start_pos: Vector2, target_pos: Vector2, s
 
 
 func _on_body_entered(_body: Node) -> void:
+	hitArea.monitorable = true
+	hitArea.monitoring = true
 	sprite.hide()
 	spriteAnimation.show()
 	spriteAnimation.play("Explode")
 	print('БУУУУУУУУУУУУУУУУУМ *щелчок демона-бомбы')
 	await spriteAnimation.animation_finished
 	queue_free()
+
+
+func _on_hit_area_body_entered(body: Node2D) -> void:
+	if body is Player:
+		Global._on_hero_taked_damage.emit(DMG)
+		hitArea.monitorable = false
+		hitArea.monitoring = false
