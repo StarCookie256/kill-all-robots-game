@@ -20,13 +20,13 @@ func _process(_delta: float) -> void:
 
 func _on_mob_timer_timeout() -> void:
 	var mobLeft = policeRobotScene.instantiate()
-	var mobleft2 = rocketRobotScene.instantiate()
+	var mobleft2 = meleeNormalRobotScene.instantiate()
 	add_child(mobLeft)
 	add_child(mobleft2)
 	mobLeft.global_position = leftPortal.global_position
 	mobleft2.global_position = leftPortal.global_position
 	
-	var mobRight = policeRobotScene.instantiate()
+	var mobRight = meleeWreckedRobotScene.instantiate()
 	var mobright2 = rocketRobotScene.instantiate()
 	add_child(mobRight)
 	add_child(mobright2)
